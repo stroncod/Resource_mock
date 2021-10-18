@@ -96,7 +96,7 @@ class Database:
         
         if not self.fpu or not self.fpur or not self.grat:
             raise Exception("Problems on reading files...") 
-        
+
     '''
         def _get_info(self, info: str, site: Site, date_str: str):
         
