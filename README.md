@@ -7,6 +7,17 @@ For server:
 - openpyxl
 
 For client:
-- gcl
+- gql
 
+
+To start server:
+
+```
+strawberry server main
+```
+
+To start client:
+```
+python test.py
+```
 
