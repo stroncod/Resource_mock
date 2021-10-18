@@ -11,3 +11,12 @@ class Query:
     northFpus: List[GmosNorthFPU] = strawberry.field(resolver=get_north_fpus)
     southDisperser: List[GmosNorthDisperser] = strawberry.field(resolver=get_south_disperser)
     northDisperser: List[GmosSouthDisperser] = strawberry.field(resolver=get_north_disperser)
+
+
+@strawberry.type
+class Mutation:
+    @strawberry.mutation
+    def add_disperser(self, site: str, date: str, names: List[str]) -> List[GmosSouthDisperser]:
+        print(f'Adding {names} for {site} at {date}')
+
+        return [GmosSouthDisperser(name) for name in names]
